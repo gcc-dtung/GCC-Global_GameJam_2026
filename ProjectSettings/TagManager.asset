@@ -11,13 +11,13 @@ TagManager:
   - Ground1
   - Water
   - UI
-  - Item
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ground2
+  - Both
+  - World1
+  - World2
+  - NoMask
+  - Mirror
+  - Sensor
   - 
   - 
   - 
