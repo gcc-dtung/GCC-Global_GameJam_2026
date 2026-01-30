@@ -8,6 +8,42 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_MainMenu.unity
+    guid: 65ebad4cb479bbc45881dd2953041bfe
+  - enabled: 1
+    path: Assets/Scenes/plantcraft94.unity
+    guid: 9b5d7fb31dcb64d448937c938074471b
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level1.unity
+    guid: 18c68ec43c492e545ae07d8ec2209d57
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level2.unity
+    guid: 9b590915c22d7bd4f99115e1e29e2209
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level3.unity
+    guid: 01ca9e2863cd2ec4795f3dcdd06fa4e2
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level4.unity
+    guid: 2a1044b4c363bc14cac08466f0ccd593
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level5.unity
+    guid: ce7f35ca7b6d1fe4d842f1846da9a3c9
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level6.unity
+    guid: 0a626afb77ef4ab42a8370b7ecf97380
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level7.unity
+    guid: cb9b328bd39577949aab54138e587596
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level8.unity
+    guid: 765c3fa63b4c3324eb39a99dfc9e7307
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level9.unity
+    guid: 630e0a2887a3e654c8f1554a7499e64a
+  - enabled: 1
+    path: Assets/Scenes/Level/SCN_Level10.unity
+    guid: ba8240d1f8872c94b9818a8a0ce3f0c3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
