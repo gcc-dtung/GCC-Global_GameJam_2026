@@ -665,6 +665,8 @@ MonoBehaviour:
   backButton: {fileID: 3199556812882510828}
   prevOption: 
   currentPanel: 0
+  winPanel: 2
+  winEventChannel: {fileID: 11400000, guid: a287563b0b43a614ebec4d59d96fc823, type: 2}
 --- !u!1 &4664620708099157201
 GameObject:
   m_ObjectHideFlags: 0
