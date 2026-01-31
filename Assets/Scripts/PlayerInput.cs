@@ -8,11 +8,12 @@ public class PlayerInput : MonoBehaviour
     public InputAction MoveAction { get; private set; }
     public InputAction JumpAction { get; private set; }
     public InputAction InteractAction { get; private set; }
-
+    public InputAction WallSlideAction { get; private set; }
     void Awake()
     {
         MoveAction = InputSystem.actions.FindAction("Move");
         JumpAction = InputSystem.actions.FindAction("Jump");
         InteractAction = InputSystem.actions.FindAction("Interact");
+        WallSlideAction = InputSystem.actions.FindAction("Slide");
     }
 }
