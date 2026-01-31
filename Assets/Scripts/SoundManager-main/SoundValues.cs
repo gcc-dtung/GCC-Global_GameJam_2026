@@ -6,7 +6,11 @@ namespace SmallHedge.SoundManager
 	public enum SoundType
 	{
 		BackgroundSound,
-		UIButtonClick,
+		ConfirmSound,
+		BackSound,
+		Run,
+		Jump,
+		Land
 		
 	}
 }

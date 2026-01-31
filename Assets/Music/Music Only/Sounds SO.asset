@@ -18,7 +18,49 @@ MonoBehaviour:
     mixer: {fileID: 24300002, guid: 83cb5f50095426a4983c60127ed63a1f, type: 2}
     sounds:
     - {fileID: 8300000, guid: 9615fe91e333443048d90611bb3a0933, type: 3}
-  - name: UIButtonClick
+  - name: ConfirmSound
     volume: 1
     mixer: {fileID: 0}
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: aa0d9fec0273a31438d29c8561a7606c, type: 3}
+  - name: BackSound
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 68f4b552c652bb949ad081b5a6e961e3, type: 3}
+  - name: Run
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: e819aa21f53f17b45bcdbfdf9a76163f, type: 3}
+    - {fileID: 8300000, guid: 84b9bd49420bec74689b627fd2f590d8, type: 3}
+    - {fileID: 8300000, guid: 9be1c0083e6dcfd4d90f009e19d96b11, type: 3}
+    - {fileID: 8300000, guid: a1a208309d048494bb5c80f8315f9c0d, type: 3}
+    - {fileID: 8300000, guid: 6bd0536301bef25469fd5fd913bb9aca, type: 3}
+    - {fileID: 8300000, guid: f395509553891374bbbe25210162afa5, type: 3}
+    - {fileID: 8300000, guid: c54dfa2e171270e43a9c0eeb36cde12a, type: 3}
+    - {fileID: 8300000, guid: fee1915871ac583489516eaa705ba500, type: 3}
+  - name: Jump
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: fb8d39434a0a28a4ca0296c1fc534633, type: 3}
+    - {fileID: 8300000, guid: d04d0c0893343bc41904a42ff1234599, type: 3}
+    - {fileID: 8300000, guid: 3194df110da67ed4ebea272f536629b1, type: 3}
+    - {fileID: 8300000, guid: d5b8612c56f34ac4e93445ae12826e3f, type: 3}
+    - {fileID: 8300000, guid: 4185b696365092346a9818adbb2a478d, type: 3}
+    - {fileID: 8300000, guid: b19a038a6267e8e47a2dda1eb03d9808, type: 3}
+    - {fileID: 8300000, guid: 19546585d6a713f40be8da0c45aab1fc, type: 3}
+    - {fileID: 8300000, guid: 8da8ecd0fcf1f3e499faa5b034e4f727, type: 3}
+  - name: Land
+    volume: 1
+    mixer: {fileID: 0}
+    sounds:
+    - {fileID: 8300000, guid: 90ca5b1f926705342bf713f291988349, type: 3}
+    - {fileID: 8300000, guid: 70b0ad7a8f4cde34796205a1dcafdb2b, type: 3}
+    - {fileID: 8300000, guid: a6f3cc585f3121b4c9b384a3b4851a6a, type: 3}
+    - {fileID: 8300000, guid: c7932a3805abac642ab4f6c2bec0b370, type: 3}
+    - {fileID: 8300000, guid: 5ab4f2835eb009945a68e52ddf06aafe, type: 3}
+    - {fileID: 8300000, guid: 32c36c525fcba234a8aef45154b73b3f, type: 3}
+    - {fileID: 8300000, guid: 1361d73c8c52f774782926008c528233, type: 3}
+    - {fileID: 8300000, guid: b670fd8c95e7d384886248bb0b8ff94c, type: 3}
