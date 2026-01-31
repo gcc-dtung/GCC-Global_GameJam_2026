@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private PlayerJumpState _jumpState;
     private PlayerFallState _fallState;
     private PlayerPushAndHoldState _pushAndHoldState;
+    private PlayerTouchInteractionState _touchInteractionState;
     void Awake()
     {
         OnInit();
@@ -25,12 +26,15 @@ public class PlayerController : MonoBehaviour
         _jumpState = new PlayerJumpState(this,"Jump");
         _fallState = new PlayerFallState(this,"Fall");
         _pushAndHoldState = new PlayerPushAndHoldState(this,"PushAndHold");
+        _touchInteractionState = new PlayerTouchInteractionState(this, "Touch");
         _stateMachineManager.AddTransition(_groundState,_jumpState,() => input.JumpAction.WasPressedThisFrame());
         _stateMachineManager.AddTransition(_jumpState,_fallState,() => Movement.rb.linearVelocityY <= 0.5f || !input.JumpAction.IsPressed());
         _stateMachineManager.AddTransition(_fallState,_jumpState,() => Movement.IsGrounded && input.JumpAction.IsPressed());
         _stateMachineManager.AddTransition(_fallState,_groundState,() => !Movement.JumpBuffer && Movement.IsGrounded);
-        _stateMachineManager.AddTransition(_groundState,_pushAndHoldState,() => input.InteractAction.IsPressed() && InteractSystem.CheckInteractionItem());
+        _stateMachineManager.AddTransition(_groundState,_pushAndHoldState,() => input.InteractAction.IsPressed() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.HoldInteract);
+        _stateMachineManager.AddTransition(_groundState,_touchInteractionState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.PressInteract);
         _stateMachineManager.AddTransition(_pushAndHoldState,_groundState,() => !input.InteractAction.IsPressed() || !InteractSystem.CheckInteractionItem());
+        _stateMachineManager.AddTransition(_touchInteractionState,_groundState,() => true);
         _stateMachineManager.AddTransition(_pushAndHoldState,_fallState,() => !Movement.IsGrounded);
         
 
@@ -47,5 +51,11 @@ public class PlayerController : MonoBehaviour
         _stateMachineManager.Tick();
         Movement.SetUpMovement(input.MoveAction);
         Movement.Jump(input.JumpAction);
+    }
+
+    public void CompleteAnimation()
+    {
+        IState currentState = _stateMachineManager.GetCurrentState();
+        currentState.AnimationDone = true;
     }
 }
