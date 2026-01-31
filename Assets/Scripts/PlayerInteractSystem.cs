@@ -1,42 +1,65 @@
 using System;
 using UnityEngine;
-using UnityEngine.Splines;
 
 public class PlayerInteractSystem : MonoBehaviour
 {
-    [SerializeField] private Transform checkPoint;
-    [SerializeField] private float checkRadius;
-    [SerializeField] private LayerMask itemLayer;
-    private Collider2D items;
+    private IInteraction _interaction;
 
-    [field:SerializeField]public TypeOfInteract InteractType { get; private set; }
-    
-    public bool CheckInteractionItem()
+    [field: SerializeField]
+    public TypeOfInteract InteractType { get; private set; }
+
+    [SerializeField] 
+    private bool CheckItems;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        items = Physics2D.OverlapCircle(checkPoint.position,checkRadius,itemLayer);
-        if (items == null) return false;
-        InteractType = items.GetComponent<IInteraction>().InteractType;
-        return true;
+        // đã có item rồi thì bỏ qua
+        if (_interaction != null) return;
+
+        if (!other.CompareTag("Item")) return;
+
+        if (other.TryGetComponent(out IInteraction interaction))
+        {
+            _interaction = interaction;
+            InteractType = interaction.InteractType;
+            CheckItems = true;
+        }
     }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (_interaction == null) return;
+
+        if (other.TryGetComponent(out IInteraction interaction)
+            && interaction == _interaction)
+        {
+            ClearInteract();
+        }
+    }
+
+    public bool CheckInteractionItem() => CheckItems;
 
     public void Interact()
     {
-        if(items == null) { return;}
-        if (items.TryGetComponent<IInteraction>(out var interaction))
-        {
-            interaction.Interacted(this.gameObject);
-        }
+        _interaction?.Interacted(gameObject);
+    }
+
+    public void HoldInteract(float multiplier)
+    {
+        _interaction?.HoldInteracted(multiplier);
     }
 
     public void UnInteract()
     {
-        if(items.TryGetComponent<IInteraction>(out var  interaction))
-        interaction.UnInteracted();
-        InteractType = TypeOfInteract.NoneInteract;
+        _interaction?.UnInteracted();
+        ClearInteract();
     }
 
-    private void OnDrawGizmos()
+    private void ClearInteract()
     {
-        Gizmos.DrawWireSphere(checkPoint.position,checkRadius);
+        _interaction?.UnInteracted();
+        _interaction = null;
+        InteractType = TypeOfInteract.NoneInteract;
+        CheckItems = false;
     }
 }

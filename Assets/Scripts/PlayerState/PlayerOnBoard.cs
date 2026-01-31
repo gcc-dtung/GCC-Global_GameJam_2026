@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class PlayerPushAndHoldState : PlayerBaseState
+public class PlayerOnBoard : PlayerBaseState
 {
-    public PlayerPushAndHoldState(PlayerController controller, string _name) : base(controller, _name)
+    public PlayerOnBoard(PlayerController controller, string _name) : base(controller, _name)
     {
     }
 
@@ -10,17 +10,16 @@ public class PlayerPushAndHoldState : PlayerBaseState
     {
         base.EnterState();
         _controller.InteractSystem.Interact();
+        _controller.Movement.StopMove();
     }
 
     public override void Action()
     {
-        _movement.SlowMove();
-       // _controller.InteractSystem.HoldInteract(_movement.Movement);
+        _controller.InteractSystem.HoldInteract(_controller.Movement.Movement);
     }
 
     public override void ExitState()
     {
-        Debug.Log("UnInterct");
         base.ExitState();
         _controller.InteractSystem.UnInteract();
     }

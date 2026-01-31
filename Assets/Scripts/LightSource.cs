@@ -8,10 +8,9 @@ public class LightSource : MonoBehaviour
 	public LayerMask reflectLayer;
 	public LayerMask blockLayer;
 	public LayerMask sensorLayer;
-
 	public UnityEvent OnSensorReceive;
 	public UnityEvent OnSensorExit;
-
+	
 	LineRenderer lr;
 
 	bool isHittingSensor; // state memory

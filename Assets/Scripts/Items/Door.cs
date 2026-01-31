@@ -1,28 +1,25 @@
 using System;
+using PrimeTween;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
    private BoxCollider2D _collider2D;
-   [SerializeField] private VoidEventChannelSO LeverEvent;
-
+   [SerializeField] private float MaxHeight;
+   [SerializeField] private float MinHeight;
    private void Awake()
    {
       _collider2D = this.GetComponent<BoxCollider2D>();
    }
-
-   private void OnEnable()
+   
+   public void Open()
    {
-      LeverEvent.AddListener(OpenOrClosed);
+      Tween.PositionY(transform, endValue: MaxHeight, duration: 1, ease: Ease.InOutSine);
    }
 
-   private void OnDisable()
+   public void Close()
    {
-      LeverEvent.RemoveListener(OpenOrClosed);
-   }
-
-   private void OpenOrClosed()
-   {
-      _collider2D.isTrigger = !_collider2D.isTrigger;
+      Tween.PositionY(transform, endValue: MinHeight, duration: 1, ease: Ease.InOutSine);
    }
 }

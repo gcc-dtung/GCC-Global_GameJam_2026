@@ -4,6 +4,7 @@ public interface IInteraction
 {
    public TypeOfInteract InteractType { get; set; }
    public void Interacted(GameObject game);
+   public void HoldInteracted(float direction);
    public void UnInteracted();
 }
 
@@ -11,5 +12,6 @@ public enum TypeOfInteract
 {
    NoneInteract = 0,
    HoldInteract = 1,
-   PressInteract = 2
+   PressInteract = 2,
+   HoldBoard = 3
 }
