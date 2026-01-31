@@ -3,8 +3,10 @@
 
 namespace SmallHedge.SoundManager
 {
-    public enum SoundType
-    {
-        //Put sound names in here
-    }
+	public enum SoundType
+	{
+		BackgroundSound,
+		UIButtonClick,
+		
+	}
 }
