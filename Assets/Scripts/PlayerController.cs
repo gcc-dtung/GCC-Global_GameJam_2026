@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         _stateMachineManager.AddTransition(_groundState,_pushAndHoldState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.HoldInteract);
         _stateMachineManager.AddTransition(_groundState,_touchInteractionState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.PressInteract);
         _stateMachineManager.AddTransition(_groundState,_onBoardState,() => input.InteractAction.IsPressed() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.HoldBoard);
-      
+        _stateMachineManager.AddTransition(_groundState,_fallState,() => Movement.CoyoteTime <=0f);
         _stateMachineManager.AddTransition(_jumpState,_fallState,() => Movement.rb.linearVelocityY <= 0.5f || !input.JumpAction.IsPressed());
         _stateMachineManager.AddTransition(_fallState,_jumpState,() => Movement.IsGrounded && input.JumpAction.IsPressed());
         _stateMachineManager.AddTransition(_fallState,_groundState,() => !Movement.JumpBuffer && Movement.IsGrounded);
