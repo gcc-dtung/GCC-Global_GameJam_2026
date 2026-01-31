@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -6,6 +7,6 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private SceneEnum level;
     public void LoadScene()
     {
-        LevelManager.Instance.Load((int)level);
+        SceneManager.LoadScene((int)level);
     }
 }

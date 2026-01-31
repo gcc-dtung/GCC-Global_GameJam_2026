@@ -1,34 +1,51 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using Object = System.Object;
 
-public class LevelManager : Singleton<LevelManager>
+public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private List<SceneAsset> levels;
-    private bool[] _unlockedLevels = new bool[11];
-    protected override void Awake()
+    [SerializeField] private List<Button> buttons = new List<Button>();
+    private int currentLevel = 0;
+    protected void Awake()
     {
-        base.Awake();
-        DontDestroyOnLoad(gameObject);
-    }
+        PlayerPrefs.DeleteAll();
+        int unlockLevel = PlayerPrefs.GetInt("LevelUnlock", 1);
+        for (int i = 0; i < buttons.Count; i++)
+        {
+            buttons[i].interactable = false;
+        }
 
-    private void Start()
-    {
-        _unlockedLevels[0] = true;
-        _unlockedLevels[1] = true;
+        for (int i = 0; i < unlockLevel; i++)
+        {
+            buttons[i].interactable = true;
+        }
+            
     }
+    
 
     public void Load(int index)
     {
-        if (index >= levels.Count || levels[index] == null)
-        {
-            Debug.LogError("LevelManager: Load index out of range or level was null");
+        if (index > 10)
             return;
-        }
-        SceneManager.LoadScene(levels[index].name);
+        currentLevel = index;
+        SceneManager.LoadScene(index);
+    }
+    
+    public void WinLevel()
+    {
+        // if (currentLevel < 10 && !_unlockedLevels[currentLevel + 1])
+        // {
+        //     _unlockedLevels[currentLevel + 1] = true;
+        // }
+        Load(0);
+        //CheckLock();
     }
 
+    
     
 }
