@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private PlayerFallState _fallState;
     private PlayerPushAndHoldState _pushAndHoldState;
     private PlayerTouchInteractionState _touchInteractionState;
+    private PlayerOnBoard _onBoardState;
     void Awake()
     {
         OnInit();
@@ -27,15 +28,22 @@ public class PlayerController : MonoBehaviour
         _fallState = new PlayerFallState(this,"Fall");
         _pushAndHoldState = new PlayerPushAndHoldState(this,"PushAndHold");
         _touchInteractionState = new PlayerTouchInteractionState(this, "Touch");
+        _onBoardState = new PlayerOnBoard(this, "OnBoard");
         _stateMachineManager.AddTransition(_groundState,_jumpState,() => input.JumpAction.WasPressedThisFrame());
+        _stateMachineManager.AddTransition(_groundState,_pushAndHoldState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.HoldInteract);
+        _stateMachineManager.AddTransition(_groundState,_touchInteractionState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.PressInteract);
+        _stateMachineManager.AddTransition(_groundState,_onBoardState,() => input.InteractAction.IsPressed() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.HoldBoard);
+      
         _stateMachineManager.AddTransition(_jumpState,_fallState,() => Movement.rb.linearVelocityY <= 0.5f || !input.JumpAction.IsPressed());
+        
         _stateMachineManager.AddTransition(_fallState,_jumpState,() => Movement.IsGrounded && input.JumpAction.IsPressed());
         _stateMachineManager.AddTransition(_fallState,_groundState,() => !Movement.JumpBuffer && Movement.IsGrounded);
-        _stateMachineManager.AddTransition(_groundState,_pushAndHoldState,() => input.InteractAction.IsPressed() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.HoldInteract);
-        _stateMachineManager.AddTransition(_groundState,_touchInteractionState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.PressInteract);
+
         _stateMachineManager.AddTransition(_pushAndHoldState,_groundState,() => !input.InteractAction.IsPressed() || !InteractSystem.CheckInteractionItem());
-        _stateMachineManager.AddTransition(_touchInteractionState,_groundState,() => true);
+        _stateMachineManager.AddTransition(_onBoardState,_groundState,() => !input.InteractAction.IsPressed() || !InteractSystem.CheckInteractionItem());
         _stateMachineManager.AddTransition(_pushAndHoldState,_fallState,() => !Movement.IsGrounded);
+        
+        _stateMachineManager.AddTransition(_touchInteractionState,_groundState,() => true);
         
 
         
