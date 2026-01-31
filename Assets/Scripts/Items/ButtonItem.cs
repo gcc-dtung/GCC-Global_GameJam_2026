@@ -5,8 +5,13 @@ using UnityEngine;
 public class ButtonItem : MonoBehaviour
 {
     [SerializeField] private Door _door;
+    private Animator _animator;
 
-    // Biến đếm số lượng đối tượng đang đè lên nút
+    private void Awake()
+    {
+        _animator = this.GetComponent<Animator>();
+    }
+
     private int _pressingCount = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -18,6 +23,8 @@ public class ButtonItem : MonoBehaviour
             {
                 _door.Open();
                 Debug.Log("Button Pressed - Door Opened");
+
+                _animator.SetTrigger("Pull");
             }
         }
     }
@@ -33,6 +40,7 @@ public class ButtonItem : MonoBehaviour
                 _pressingCount = 0; 
                 _door.Close();
                 Debug.Log("Button Released - Door Closed");
+                _animator.SetTrigger("Push");
             }
         }
     }

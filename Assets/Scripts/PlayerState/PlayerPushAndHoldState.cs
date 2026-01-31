@@ -15,7 +15,7 @@ public class PlayerPushAndHoldState : PlayerBaseState
     public override void Action()
     {
         _movement.SlowMove();
-       // _controller.InteractSystem.HoldInteract(_movement.Movement);
+        _animator.SetFloat("xVelocity", _movement.Movement * _movement.FacingDirection);
     }
 
     public override void ExitState()

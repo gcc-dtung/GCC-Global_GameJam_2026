@@ -41,5 +41,6 @@ public class WinDoor : MonoBehaviour
         }
        
         this.gameObject.SetActive(false);
+        GameManager.instance.StopGame();
     }
 }

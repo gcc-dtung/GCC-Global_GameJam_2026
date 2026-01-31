@@ -28,6 +28,7 @@ public class PlayerChangeWorld : MonoBehaviour
 	}
 	private void Update()
 	{
+		if(GameManager.instance.IsGameDone) return;
 		overlap = Physics2D.OverlapBox(transform.position, new Vector2(0.9f, 1.9f), 0f, NoMask);
 		if (WearMask.WasPressedThisFrame() && !isWearingMask && !overlap)
 		{

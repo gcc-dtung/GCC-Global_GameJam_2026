@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 	private void OnEnable()
 	{
 		winEventChannel.AddListener(ShowWinPanel);
+		GameManager.instance.ContinueGame();
 	}
 
 	public void OnDisable()
