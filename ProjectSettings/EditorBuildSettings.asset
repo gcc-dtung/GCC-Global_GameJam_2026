@@ -6,14 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/Level/SCN_MainMenu.unity
     guid: 65ebad4cb479bbc45881dd2953041bfe
-  - enabled: 1
-    path: Assets/Scenes/plantcraft94.unity
-    guid: 9b5d7fb31dcb64d448937c938074471b
   - enabled: 1
     path: Assets/Scenes/Level/SCN_Level1.unity
     guid: 18c68ec43c492e545ae07d8ec2209d57
@@ -44,6 +38,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level/SCN_Level10.unity
     guid: ba8240d1f8872c94b9818a8a0ce3f0c3
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/plantcraft94.unity
+    guid: 9b5d7fb31dcb64d448937c938074471b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

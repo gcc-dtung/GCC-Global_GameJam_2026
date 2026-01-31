@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6875174970889109344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2681296746845114458}
+  - component: {fileID: 8529364574142622007}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2681296746845114458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875174970889109344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8529364574142622007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875174970889109344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae63c1c1f49889499d05f71e9c593c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  levels:
+  - {fileID: 102900000, guid: 65ebad4cb479bbc45881dd2953041bfe, type: 3}
+  - {fileID: 102900000, guid: 18c68ec43c492e545ae07d8ec2209d57, type: 3}
+  - {fileID: 102900000, guid: 9b590915c22d7bd4f99115e1e29e2209, type: 3}
+  - {fileID: 102900000, guid: 01ca9e2863cd2ec4795f3dcdd06fa4e2, type: 3}
+  - {fileID: 102900000, guid: 2a1044b4c363bc14cac08466f0ccd593, type: 3}
+  - {fileID: 102900000, guid: ce7f35ca7b6d1fe4d842f1846da9a3c9, type: 3}
+  - {fileID: 102900000, guid: 0a626afb77ef4ab42a8370b7ecf97380, type: 3}
+  - {fileID: 102900000, guid: cb9b328bd39577949aab54138e587596, type: 3}
+  - {fileID: 102900000, guid: 765c3fa63b4c3324eb39a99dfc9e7307, type: 3}
+  - {fileID: 102900000, guid: 630e0a2887a3e654c8f1554a7499e64a, type: 3}
+  - {fileID: 102900000, guid: ba8240d1f8872c94b9818a8a0ce3f0c3, type: 3}
+  targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
