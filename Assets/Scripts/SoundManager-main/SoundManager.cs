@@ -11,8 +11,8 @@ namespace SmallHedge.SoundManager
     public class SoundManager : MonoBehaviour
     {
         [SerializeField] private SoundsSO SO;
-        private static SoundManager instance = null;
-        private AudioSource audioSource;
+        public static SoundManager instance = null;
+        public AudioSource audioSource;
 
         private void Awake()
         {
