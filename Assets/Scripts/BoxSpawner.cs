@@ -1,11 +1,15 @@
 using System;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class BoxSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject prefabs;
+    [SerializeField] private GameObject spike;
+    [SerializeField] private Transform spikePosition;
     [SerializeField] private VoidEventChannelSO BoxSpawnChannel;
-
+    private int amount = 0;
+    private bool isDone = false;
     private void OnEnable()
     {
         BoxSpawnChannel.AddListener(SpawnObject);
@@ -18,6 +22,15 @@ public class BoxSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
+        if (amount > 3 && !isDone)
+        {
+            Instantiate(spike,this.spikePosition.position,Quaternion.identity);
+            isDone = true;
+            return;
+        }
      Instantiate(prefabs,this.transform.position,Quaternion.identity);
+     amount++;
     }
+    
+    
 }
