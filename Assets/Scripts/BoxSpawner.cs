@@ -22,7 +22,7 @@ public class BoxSpawner : MonoBehaviour
 
     public void SpawnObject()
     {
-        if (amount > 3 && !isDone)
+        if (amount > 2 && !isDone)
         {
             Instantiate(spike,this.spikePosition.position,Quaternion.identity);
             isDone = true;

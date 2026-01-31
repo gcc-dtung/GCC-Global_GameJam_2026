@@ -18,7 +18,7 @@ public class PlayerChangeWorld : MonoBehaviour
 	}
 	private void Start()
 	{
-		PM.GroundLayer = LayerMask.GetMask("Ground1");
+		PM.GroundLayer = LayerMask.GetMask("Ground1","Item");
 		TransitionSR.color = new Color(0.000f, 0.000f, 0.000f, 0.000f);
 		mask.SetActive(false);
 		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), true);
@@ -32,7 +32,7 @@ public class PlayerChangeWorld : MonoBehaviour
 			PlayEffect();
 			mask.SetActive(true);
 			isWearingMask = true;
-			PM.GroundLayer = LayerMask.GetMask("Ground2");
+			PM.GroundLayer = LayerMask.GetMask("Ground2","Item");
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground1"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World1"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), false);
@@ -43,7 +43,7 @@ public class PlayerChangeWorld : MonoBehaviour
 			PlayEffect();
 			mask.SetActive(false);
 			isWearingMask = false;
-			PM.GroundLayer = LayerMask.GetMask("Ground1");
+			PM.GroundLayer = LayerMask.GetMask("Ground1", "Item");
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World2"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground1"), false);
