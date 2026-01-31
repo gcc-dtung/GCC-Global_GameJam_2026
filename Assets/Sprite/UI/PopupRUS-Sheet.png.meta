@@ -1,28 +1,49 @@
 fileFormatVersion: 2
-guid: a4b7d7515c68cff48a03d1fcf038e5f4
+guid: 88c936ad2dde7244cbb3a8451e51fe9d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1959487661427051605
-    second: UI-Sheetfixed2_0
+      213: 3871128079387138780
+    second: PopupRUS-Sheet_0
   - first:
-      213: 3775441241920771449
-    second: UI-Sheetfixed2_1
+      213: 2501624783652018234
+    second: PopupRUS-Sheet_1
   - first:
-      213: 424566841333133706
-    second: UI-Sheetfixed2_2
+      213: -8766131529819009486
+    second: PopupRUS-Sheet_2
   - first:
-      213: 6053954234947242616
-    second: UI-Sheetfixed2_3
+      213: 206677027498138931
+    second: PopupRUS-Sheet_3
   - first:
-      213: 8230462805317352303
-    second: UI-Sheetfixed2_4
+      213: 7057085776593786667
+    second: PopupRUS-Sheet_4
   - first:
-      213: -6864323538107099663
-    second: UI-Sheetfixed2_5
+      213: -8051011089512758404
+    second: PopupRUS-Sheet_5
   - first:
-      213: 2918738147092798922
-    second: UI-Sheetfixed2_6
+      213: 7667291439346393728
+    second: PopupRUS-Sheet_6
+  - first:
+      213: -2349985951143885327
+    second: PopupRUS-Sheet_7
+  - first:
+      213: -5464003176657379952
+    second: PopupRUS-Sheet_8
+  - first:
+      213: 3601226113235314258
+    second: PopupRUS-Sheet_9
+  - first:
+      213: 363107749352286748
+    second: PopupRUS-Sheet_10
+  - first:
+      213: 9113102321163488027
+    second: PopupRUS-Sheet_11
+  - first:
+      213: 4494722861047713752
+    second: PopupRUS-Sheet_12
+  - first:
+      213: -8309617367223966337
+    second: PopupRUS-Sheet_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI-Sheetfixed2_0
+      name: PopupRUS-Sheet_0
       rect:
         serializedVersion: 2
-        x: 95
-        y: 431
-        width: 362
-        height: 130
+        x: 231
+        y: 622
+        width: 442
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,140 +154,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55cce1175af713b10800000000000000
-      internalID: 1959487661427051605
+      spriteID: cda19e36a7209b530800000000000000
+      internalID: 3871128079387138780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sheetfixed2_1
+      name: PopupRUS-Sheet_12
       rect:
         serializedVersion: 2
-        x: 635
-        y: 431
-        width: 74
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9751c0f6ecf056430800000000000000
-      internalID: 3775441241920771449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sheetfixed2_2
-      rect:
-        serializedVersion: 2
-        x: 763
-        y: 431
-        width: 74
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a813211fa4d54e500800000000000000
-      internalID: 424566841333133706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sheetfixed2_3
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 291
-        width: 362
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87a808c2d47f30450800000000000000
-      internalID: 6053954234947242616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sheetfixed2_4
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 127
-        width: 362
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6b7108805a783270800000000000000
-      internalID: 8230462805317352303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: UI-Sheetfixed2_5
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 155
+        x: 339
+        y: 495
         width: 162
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f516cf5c160db0a0800000000000000
-      internalID: -6864323538107099663
+      spriteID: 8df8398c0a6706e30800000000000000
+      internalID: 4494722861047713752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI-Sheetfixed2_6
+      name: PopupRUS-Sheet_13
       rect:
         serializedVersion: 2
-        x: 755
-        y: 155
-        width: 162
-        height: 74
+        x: 43
+        y: 107
+        width: 798
+        height: 346
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: acd19d171e0718820800000000000000
-      internalID: 2918738147092798922
+      spriteID: f75e23fd70f4eac80800000000000000
+      internalID: -8309617367223966337
       vertices: []
       indices: 
       edges: []
@@ -275,7 +208,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ad88caa7601345d46b14b20452ff4323
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +218,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI-Sheetfixed2_0: 1959487661427051605
-      UI-Sheetfixed2_1: 3775441241920771449
-      UI-Sheetfixed2_2: 424566841333133706
-      UI-Sheetfixed2_3: 6053954234947242616
-      UI-Sheetfixed2_4: 8230462805317352303
-      UI-Sheetfixed2_5: -6864323538107099663
-      UI-Sheetfixed2_6: 2918738147092798922
+      PopupRUS-Sheet_0: 3871128079387138780
+      PopupRUS-Sheet_1: 2501624783652018234
+      PopupRUS-Sheet_10: 363107749352286748
+      PopupRUS-Sheet_11: 9113102321163488027
+      PopupRUS-Sheet_12: 4494722861047713752
+      PopupRUS-Sheet_13: -8309617367223966337
+      PopupRUS-Sheet_2: -8766131529819009486
+      PopupRUS-Sheet_3: 206677027498138931
+      PopupRUS-Sheet_4: 7057085776593786667
+      PopupRUS-Sheet_5: -8051011089512758404
+      PopupRUS-Sheet_6: 7667291439346393728
+      PopupRUS-Sheet_7: -2349985951143885327
+      PopupRUS-Sheet_8: -5464003176657379952
+      PopupRUS-Sheet_9: 3601226113235314258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

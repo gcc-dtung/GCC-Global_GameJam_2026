@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: 25d26c2bd152ae349a8299d7201e7538
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5878233362395337550
+    second: YouWinPopup-Sheet_0
+  - first:
+      213: -8441132021976051977
+    second: YouWinPopup-Sheet_1
+  - first:
+      213: 221141358461760563
+    second: YouWinPopup-Sheet_2
+  - first:
+      213: -8636047444535727398
+    second: YouWinPopup-Sheet_3
+  - first:
+      213: 347330807198455307
+    second: YouWinPopup-Sheet_4
+  - first:
+      213: -1491706690566250894
+    second: YouWinPopup-Sheet_5
+  - first:
+      213: -4360372641740990506
+    second: YouWinPopup-Sheet_6
+  - first:
+      213: 1582782566485246213
+    second: YouWinPopup-Sheet_7
+  - first:
+      213: -5138880910960498118
+    second: YouWinPopup-Sheet_8
+  - first:
+      213: 5518339797362454861
+    second: YouWinPopup-Sheet_9
+  - first:
+      213: 6229337692512792635
+    second: YouWinPopup-Sheet_10
+  - first:
+      213: 7506233335244769298
+    second: YouWinPopup-Sheet_11
+  - first:
+      213: -4630788193684325588
+    second: YouWinPopup-Sheet_12
+  - first:
+      213: 3312387294458386832
+    second: YouWinPopup-Sheet_13
+  - first:
+      213: 6638008544744538520
+    second: YouWinPopup-Sheet_14
+  - first:
+      213: 9057185753647911594
+    second: YouWinPopup-Sheet_15
+  - first:
+      213: 7970617398956773393
+    second: YouWinPopup-Sheet_16
+  - first:
+      213: 2600830016749812065
+    second: YouWinPopup-Sheet_17
+  - first:
+      213: 4217948620086787915
+    second: YouWinPopup-Sheet_18
+  - first:
+      213: -9106148483594408689
+    second: YouWinPopup-Sheet_19
+  - first:
+      213: 3440361526417513141
+    second: YouWinPopup-Sheet_20
+  - first:
+      213: -4398009945985413453
+    second: YouWinPopup-Sheet_21
+  - first:
+      213: 204142048256271300
+    second: YouWinPopup-Sheet_22
+  - first:
+      213: -888764613519527319
+    second: YouWinPopup-Sheet_23
+  - first:
+      213: -1727638708876072452
+    second: YouWinPopup-Sheet_24
+  - first:
+      213: -8507358199121240285
+    second: YouWinPopup-Sheet_25
+  - first:
+      213: 9027559334151302555
+    second: YouWinPopup-Sheet_26
+  - first:
+      213: -3110814102137485902
+    second: YouWinPopup-Sheet_27
+  - first:
+      213: -5478353880372059416
+    second: YouWinPopup-Sheet_28
+  - first:
+      213: -5662287531103089582
+    second: YouWinPopup-Sheet_29
+  - first:
+      213: -5412910037303926587
+    second: YouWinPopup-Sheet_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: YouWinPopup-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 811
+        width: 798
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc639fa6e15c6ea0800000000000000
+      internalID: -5878233362395337550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YouWinPopup-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 619
+        width: 532
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe41f726231bda80800000000000000
+      internalID: -8441132021976051977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YouWinPopup-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 527
+        width: 330
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e26a8edb2af8f3b0800000000000000
+      internalID: -5478353880372059416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YouWinPopup-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 527
+        width: 330
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c0a749d738b61b0800000000000000
+      internalID: -5662287531103089582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YouWinPopup-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 107
+        width: 798
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c06a59fffa71e4b0800000000000000
+      internalID: -5412910037303926587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3ecf16907d0fec14ba5b682e446ca108
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      YouWinPopup-Sheet_0: -5878233362395337550
+      YouWinPopup-Sheet_1: -8441132021976051977
+      YouWinPopup-Sheet_10: 6229337692512792635
+      YouWinPopup-Sheet_11: 7506233335244769298
+      YouWinPopup-Sheet_12: -4630788193684325588
+      YouWinPopup-Sheet_13: 3312387294458386832
+      YouWinPopup-Sheet_14: 6638008544744538520
+      YouWinPopup-Sheet_15: 9057185753647911594
+      YouWinPopup-Sheet_16: 7970617398956773393
+      YouWinPopup-Sheet_17: 2600830016749812065
+      YouWinPopup-Sheet_18: 4217948620086787915
+      YouWinPopup-Sheet_19: -9106148483594408689
+      YouWinPopup-Sheet_2: 221141358461760563
+      YouWinPopup-Sheet_20: 3440361526417513141
+      YouWinPopup-Sheet_21: -4398009945985413453
+      YouWinPopup-Sheet_22: 204142048256271300
+      YouWinPopup-Sheet_23: -888764613519527319
+      YouWinPopup-Sheet_24: -1727638708876072452
+      YouWinPopup-Sheet_25: -8507358199121240285
+      YouWinPopup-Sheet_26: 9027559334151302555
+      YouWinPopup-Sheet_27: -3110814102137485902
+      YouWinPopup-Sheet_28: -5478353880372059416
+      YouWinPopup-Sheet_29: -5662287531103089582
+      YouWinPopup-Sheet_3: -8636047444535727398
+      YouWinPopup-Sheet_30: -5412910037303926587
+      YouWinPopup-Sheet_4: 347330807198455307
+      YouWinPopup-Sheet_5: -1491706690566250894
+      YouWinPopup-Sheet_6: -4360372641740990506
+      YouWinPopup-Sheet_7: 1582782566485246213
+      YouWinPopup-Sheet_8: -5138880910960498118
+      YouWinPopup-Sheet_9: 5518339797362454861
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

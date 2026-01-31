@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: 1fb95fcf5c4c5d843808b35609306018
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6267254751532455187
+    second: Popup-Sheet_0
+  - first:
+      213: -4323807293560786141
+    second: Popup-Sheet_1
+  - first:
+      213: -6369678220891054464
+    second: Popup-Sheet_2
+  - first:
+      213: 8248227490996333609
+    second: Popup-Sheet_3
+  - first:
+      213: 4720911410353706742
+    second: Popup-Sheet_4
+  - first:
+      213: -8339140703659651707
+    second: Popup-Sheet_5
+  - first:
+      213: -766980968921474362
+    second: Popup-Sheet_6
+  - first:
+      213: -640085564947859229
+    second: Popup-Sheet_7
+  - first:
+      213: 7670016252560293863
+    second: Popup-Sheet_8
+  - first:
+      213: 2136845142328953488
+    second: Popup-Sheet_9
+  - first:
+      213: -7273345481321073794
+    second: Popup-Sheet_10
+  - first:
+      213: 2665940032371076545
+    second: Popup-Sheet_11
+  - first:
+      213: -3176239926194876152
+    second: Popup-Sheet_12
+  - first:
+      213: -5420747639821524155
+    second: Popup-Sheet_13
+  - first:
+      213: -2964700976530681254
+    second: Popup-Sheet_14
+  - first:
+      213: -7435372063570658356
+    second: Popup-Sheet_15
+  - first:
+      213: 1390659561857999195
+    second: Popup-Sheet_16
+  - first:
+      213: -7362010430548080602
+    second: Popup-Sheet_17
+  - first:
+      213: -6179559889196661589
+    second: Popup-Sheet_18
+  - first:
+      213: 5829730413571410005
+    second: Popup-Sheet_19
+  - first:
+      213: -4221758403442406469
+    second: Popup-Sheet_20
+  - first:
+      213: 3452359237234581172
+    second: Popup-Sheet_21
+  - first:
+      213: -1118852534697968106
+    second: Popup-Sheet_22
+  - first:
+      213: 1058925733381428996
+    second: Popup-Sheet_23
+  - first:
+      213: -3563616098005289992
+    second: Popup-Sheet_24
+  - first:
+      213: -8809869590979075054
+    second: Popup-Sheet_25
+  - first:
+      213: -4372102724986378107
+    second: Popup-Sheet_26
+  - first:
+      213: 26372178883699854
+    second: Popup-Sheet_27
+  - first:
+      213: -3721582805003648803
+    second: Popup-Sheet_28
+  - first:
+      213: 8374720879856925913
+    second: Popup-Sheet_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Popup-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 611
+        width: 606
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31598fdbdf2c9f650800000000000000
+      internalID: 6267254751532455187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 820
+        width: 36
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323f01ecc20cef3c0800000000000000
+      internalID: -4323807293560786141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 615
+        width: 606
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e1f36f76b5a97a0800000000000000
+      internalID: -6369678220891054464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 752
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ca27bb337977270800000000000000
+      internalID: 8248227490996333609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 436
+        width: 252
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6983e4aeb048140800000000000000
+      internalID: 4720911410353706742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 163
+        width: 602
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca53f55fd22b55f0800000000000000
+      internalID: -766980968921474362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 488
+        width: 440
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628067ed482e4d990800000000000000
+      internalID: -7362010430548080602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 371
+        width: 370
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5886bab6cbb2353c0800000000000000
+      internalID: -4372102724986378107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 375
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84e0526b51bd5000800000000000000
+      internalID: 26372178883699854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 331
+        width: 362
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd04e8918284a5cc0800000000000000
+      internalID: -3721582805003648803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Popup-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 227
+        width: 330
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc3be0e44cf83470800000000000000
+      internalID: 8374720879856925913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6b53bd3362e87c8438fafb9cefb2b1f3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Popup-Sheet_0: 6267254751532455187
+      Popup-Sheet_1: -4323807293560786141
+      Popup-Sheet_10: -7273345481321073794
+      Popup-Sheet_11: 2665940032371076545
+      Popup-Sheet_12: -3176239926194876152
+      Popup-Sheet_13: -5420747639821524155
+      Popup-Sheet_14: -2964700976530681254
+      Popup-Sheet_15: -7435372063570658356
+      Popup-Sheet_16: 1390659561857999195
+      Popup-Sheet_17: -7362010430548080602
+      Popup-Sheet_18: -6179559889196661589
+      Popup-Sheet_19: 5829730413571410005
+      Popup-Sheet_2: -6369678220891054464
+      Popup-Sheet_20: -4221758403442406469
+      Popup-Sheet_21: 3452359237234581172
+      Popup-Sheet_22: -1118852534697968106
+      Popup-Sheet_23: 1058925733381428996
+      Popup-Sheet_24: -3563616098005289992
+      Popup-Sheet_25: -8809869590979075054
+      Popup-Sheet_26: -4372102724986378107
+      Popup-Sheet_27: 26372178883699854
+      Popup-Sheet_28: -3721582805003648803
+      Popup-Sheet_29: 8374720879856925913
+      Popup-Sheet_3: 8248227490996333609
+      Popup-Sheet_4: 4720911410353706742
+      Popup-Sheet_5: -8339140703659651707
+      Popup-Sheet_6: -766980968921474362
+      Popup-Sheet_7: -640085564947859229
+      Popup-Sheet_8: 7670016252560293863
+      Popup-Sheet_9: 2136845142328953488
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

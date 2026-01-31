@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8018c3b97977747b26525444d1d48a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackGroundMusic
+  audioSource: {fileID: 0}
 --- !u!82 &133689982
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1824,6 +1825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmallHedge.SoundManager.SoundManager
   SO: {fileID: 11400000, guid: 913dccbffd3e38644ba30f0ac4783f8e, type: 2}
+  audioSource: {fileID: 0}
 --- !u!82 &1025793176
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3457,10 +3459,6 @@ PrefabInstance:
     - target: {fileID: 166752130785477789, guid: d01ca6f4138c16040a9d013eb631fd90, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 593731323042255938, guid: d01ca6f4138c16040a9d013eb631fd90, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8822805332329674157, guid: d01ca6f4138c16040a9d013eb631fd90, type: 3}
       propertyPath: m_LocalPosition.x
