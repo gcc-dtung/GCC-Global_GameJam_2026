@@ -34,7 +34,9 @@ public class PlayerChangeWorld : MonoBehaviour
 			isWearingMask = true;
 			PM.GroundLayer = LayerMask.GetMask("Ground2");
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground1"), true);
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World1"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), false);
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World2"), false);
 		}
 		else if (WearMask.WasPressedThisFrame() && isWearingMask && !overlap)
 		{
@@ -43,7 +45,9 @@ public class PlayerChangeWorld : MonoBehaviour
 			isWearingMask = false;
 			PM.GroundLayer = LayerMask.GetMask("Ground1");
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), true);
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World2"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground1"), false);
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World1"), false);
 		}
 		else if (WearMask.WasPressedThisFrame() && overlap)
 		{
@@ -54,4 +58,5 @@ public class PlayerChangeWorld : MonoBehaviour
 	{
 		Tween.Custom(Color.black,new Color(0.000f, 0.000f, 0.000f, 0.000f),duration:0.5f,onValueChange: newVal => TransitionSR.color = newVal);
 	}
+	
 }

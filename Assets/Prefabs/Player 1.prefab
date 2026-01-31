@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 9084980369890560243}
   m_Layer: 7
   m_Name: Player 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,12 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58584aa6fda01894a90b11c71919d39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractSystem
-  checkPoint: {fileID: 7995036130850934027}
-  checkRadius: 0.38
-  itemLayer:
-    serializedVersion: 2
-    m_Bits: 8192
   <InteractType>k__BackingField: 0
+  CheckItems: 0
 --- !u!114 &9084980369890560243
 MonoBehaviour:
   m_ObjectHideFlags: 0
