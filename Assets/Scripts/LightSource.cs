@@ -8,9 +8,13 @@ public class LightSource : MonoBehaviour
 	public LayerMask reflectLayer;
 	public LayerMask blockLayer;
 	public LayerMask sensorLayer;
-	public UnityEvent OnSensorRecieve;
+
+	public UnityEvent OnSensorReceive;
+	public UnityEvent OnSensorExit;
 
 	LineRenderer lr;
+
+	bool isHittingSensor; // state memory
 
 	void Awake()
 	{
@@ -26,11 +30,13 @@ public class LightSource : MonoBehaviour
 
 	void CastLight()
 	{
+		bool hitSensorThisFrame = false;
+
 		lr.positionCount = 1;
 		lr.SetPosition(0, transform.position);
 
 		Vector2 position = transform.position;
-		Vector2 direction = transform.right; // forward direction
+		Vector2 direction = transform.right;
 
 		for (int i = 0; i < maxReflections; i++)
 		{
@@ -48,30 +54,47 @@ public class LightSource : MonoBehaviour
 				break;
 			}
 
-			// draw hit point
 			lr.positionCount++;
 			lr.SetPosition(lr.positionCount - 1, hit.point);
 
-			// hit mirror → reflect
-			if (((1 << hit.collider.gameObject.layer) & reflectLayer) != 0)
+			int hitLayerMask = 1 << hit.collider.gameObject.layer;
+
+			if ((hitLayerMask & sensorLayer) != 0)
+			{
+				hitSensorThisFrame = true;
+				break;
+			}
+
+			if ((hitLayerMask & reflectLayer) != 0)
 			{
 				direction = Vector2.Reflect(direction, hit.normal);
-				position = hit.point + direction * 0.01f; // offset to avoid self-hit
+				position = hit.point + direction * 0.01f;
+				continue;
 			}
-			else if (((1 << hit.collider.gameObject.layer) & sensorLayer) != 0)
-			{
-				OnSensorRecieve.Invoke();
-				break;
-			}
-			else
-			{
-				// hit wall → stop
-				break;
-			}
+
+			// wall
+			break;
 		}
+
+		// --- SENSOR STATE CHANGES ---
+		if (hitSensorThisFrame && !isHittingSensor)
+		{
+			OnSensorReceive.Invoke(); // ENTER
+		}
+		else if (!hitSensorThisFrame && isHittingSensor)
+		{
+			OnSensorExit.Invoke(); // EXIT
+		}
+
+		isHittingSensor = hitSensorThisFrame;
 	}
-	public void test()
+	public void Test()
 	{
-		Debug.Log("Nice");
+		Debug.Log("hit");
+	}
+	public void test2()
+	{
+		Debug.Log("NotHit");
+		
 	}
 }
