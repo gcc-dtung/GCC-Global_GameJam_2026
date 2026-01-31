@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public abstract class PlayerBaseState : IState
 {
+    public bool AnimationDone { get; set; }
     protected PlayerController _controller;
     protected string _animationName;
     protected Animator _animator;
@@ -18,6 +19,7 @@ public abstract class PlayerBaseState : IState
     public virtual void EnterState()
     {
         _animator.SetBool(_animationName,true);
+        AnimationDone = false;
     }
 
     public virtual void Action()
