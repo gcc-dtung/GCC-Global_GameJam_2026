@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     [field:SerializeField] public bool IsOnWall {get; private set;}
     public float FacingDirection { get; private set; } = 1;
     [Header("Wall Stick Settings")]
-    [SerializeField] private float wallStickTime = 0.25f; 
+    [SerializeField] private float wallStickTime = 0.2f; 
     private float wallStickTimer;
     
     private void Awake()
