@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class Door : MonoBehaviour
 {
    private BoxCollider2D _collider2D;
+   [SerializeField] private float duration;
    [SerializeField] private float MaxHeight;
    [SerializeField] private float MinHeight;
+   private Tween alo;
    private void Awake()
    {
       _collider2D = this.GetComponent<BoxCollider2D>();
@@ -15,11 +17,21 @@ public class Door : MonoBehaviour
    
    public void Open()
    {
-      Tween.PositionY(transform, endValue: MaxHeight, duration: 1, ease: Ease.InOutSine);
+      if (alo.isAlive) return;
+      alo = Tween.PositionY(transform, endValue: MaxHeight, duration: duration, ease: Ease.InOutSine);
    }
 
    public void Close()
    {
-      Tween.PositionY(transform, endValue: MinHeight, duration: 1, ease: Ease.InOutSine);
+      if (alo.isAlive) return;
+      alo = Tween.PositionY(transform, endValue: MinHeight, duration: duration, ease: Ease.InOutSine);
+   }
+
+   private void OnDisable()
+   {
+      if (alo.isAlive)
+      {
+         alo.Stop();
+      }
    }
 }
