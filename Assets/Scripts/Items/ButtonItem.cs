@@ -16,7 +16,7 @@ public class ButtonItem : MonoBehaviour
             _pressingCount++;
             if (_pressingCount == 1)
             {
-                _door?.Open();
+                _door.Open();
                 Debug.Log("Button Pressed - Door Opened");
             }
         }
@@ -31,7 +31,7 @@ public class ButtonItem : MonoBehaviour
             if (_pressingCount <= 0)
             {
                 _pressingCount = 0; 
-                _door?.Close();
+                _door.Close();
                 Debug.Log("Button Released - Door Closed");
             }
         }
