@@ -54,4 +54,5 @@ public class PlayerChangeWorld : MonoBehaviour
 	{
 		Tween.Custom(Color.black,new Color(0.000f, 0.000f, 0.000f, 0.000f),duration:0.5f,onValueChange: newVal => TransitionSR.color = newVal);
 	}
+	
 }
