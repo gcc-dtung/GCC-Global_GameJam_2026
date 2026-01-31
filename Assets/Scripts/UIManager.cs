@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,19 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject backButton;
     [SerializeField] private List<int> prevOption = new List<int>();
     [SerializeField] private int currentPanel = 0;
+    [SerializeField] private int winPanel;
+    [SerializeField] private VoidEventChannelSO winEventChannel;
     //[SerializeField] private int nextPanel = 0;
+
+    private void OnEnable()
+    {
+        winEventChannel.AddListener(ShowWinPanel);
+    }
+
+    public void OnDisable()
+    {
+        winEventChannel.RemoveListener(ShowWinPanel);
+    }
 
     void Start()
     {
@@ -43,7 +56,7 @@ public class UIManager : MonoBehaviour
     
     private bool CheckMainMenu()
     {
-        return currentPanel == 0;
+        return currentPanel == 0 || currentPanel == winPanel;
     }
 
     private void ShowBackButton()
@@ -56,5 +69,10 @@ public class UIManager : MonoBehaviour
         {
             backButton.SetActive(false);
         }
+    }
+
+    public void ShowWinPanel()
+    {
+        LoadPanel(winPanel);
     }
 }

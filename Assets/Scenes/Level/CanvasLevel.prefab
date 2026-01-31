@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4856735178288617978}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1171685693547273782}
+        m_TargetAssemblyTypeName: TestWin, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1489280686315684783
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +253,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 167423955360931316}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1171685693547273782}
+        m_TargetAssemblyTypeName: TestWin, Assembly-CSharp
+        m_MethodName: BackMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1564649448798461351
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +810,7 @@ GameObject:
   - component: {fileID: 3537044973413083439}
   - component: {fileID: 5202134703623585705}
   - component: {fileID: 7709505283102433556}
+  - component: {fileID: 1171685693547273782}
   m_Layer: 5
   m_Name: WinPannel
   m_TagString: Untagged
@@ -876,6 +901,18 @@ MonoBehaviour:
   m_Spacing: {x: 50, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 2
+--- !u!114 &1171685693547273782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5214336769071910707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5635f3a6491eef349845003790bf0158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TestWin
 --- !u!1 &5778144479915490228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,6 +1584,7 @@ GameObject:
   - component: {fileID: 9079044256433651267}
   - component: {fileID: 7544310406686303942}
   - component: {fileID: 7881272202240194945}
+  - component: {fileID: 7837371759733708887}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -1655,7 +1693,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7544310406686303942}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7837371759733708887}
+        m_TargetAssemblyTypeName: BackToMenu, Assembly-CSharp
+        m_MethodName: BackMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7837371759733708887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7595926297387126511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5085070242d389740b5e638759c19cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackToMenu
 --- !u!1001 &3566693376107995366
 PrefabInstance:
   m_ObjectHideFlags: 0
