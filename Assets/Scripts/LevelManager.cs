@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     private int currentLevel = 0;
     protected void Awake()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         int unlockLevel = PlayerPrefs.GetInt("LevelUnlock", 1);
         for (int i = 0; i < buttons.Count; i++)
         {
