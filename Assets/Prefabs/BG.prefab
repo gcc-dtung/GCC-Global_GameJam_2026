@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861ccec3472c9fc43be2f56e23e2a88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax2D
-  ParallaxEffectSpeed: 0.4
+  ParallaxEffectSpeed: 0.8
   distance: 0
 --- !u!1 &1084118982469119246
 GameObject:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861ccec3472c9fc43be2f56e23e2a88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax2D
-  ParallaxEffectSpeed: 1
+  ParallaxEffectSpeed: 0.2
   distance: 0
 --- !u!1 &2246504416438588496
 GameObject:
@@ -830,8 +830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861ccec3472c9fc43be2f56e23e2a88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax2D
-  ParallaxEffectSpeed: 0
-  distance: 0.2
+  ParallaxEffectSpeed: 1
+  distance: 1
 --- !u!1 &6048631439541289768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861ccec3472c9fc43be2f56e23e2a88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Parallax2D
-  ParallaxEffectSpeed: 0.8
+  ParallaxEffectSpeed: 0.4
   distance: 0
 --- !u!1 &8108545210641852977
 GameObject:

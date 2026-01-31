@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        IsGrounded = Physics2D.OverlapCapsule(GroundCheckPos.position, new Vector2(0.74f, 0.15f), CapsuleDirection2D.Horizontal, 0, GroundLayer);
+        IsGrounded = Physics2D.OverlapCapsule(GroundCheckPos.position, new Vector2(0.6f, 0.15f), CapsuleDirection2D.Horizontal, 0, GroundLayer);
         WallCheck();
         Assist();
     }
