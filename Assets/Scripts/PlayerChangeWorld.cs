@@ -6,6 +6,7 @@ public class PlayerChangeWorld : MonoBehaviour
 {
 	[SerializeField] GameObject mask;
 	public bool isWearingMask = false;
+	PlayerMovement PM;
 	bool overlap;
 	[SerializeField] LayerMask NoMask;
 	InputAction WearMask;
@@ -13,9 +14,11 @@ public class PlayerChangeWorld : MonoBehaviour
 	private void Awake()
 	{
 		WearMask = InputSystem.actions.FindAction("Mask");
+		PM = GetComponent<PlayerMovement>();
 	}
 	private void Start()
 	{
+		PM.GroundLayer = LayerMask.GetMask("Ground1");
 		TransitionSR.color = new Color(0.000f, 0.000f, 0.000f, 0.000f);
 		mask.SetActive(false);
 		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), true);
@@ -29,6 +32,7 @@ public class PlayerChangeWorld : MonoBehaviour
 			PlayEffect();
 			mask.SetActive(true);
 			isWearingMask = true;
+			PM.GroundLayer = LayerMask.GetMask("Ground2");
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground1"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), false);
 		}
@@ -37,6 +41,7 @@ public class PlayerChangeWorld : MonoBehaviour
 			PlayEffect();
 			mask.SetActive(false);
 			isWearingMask = false;
+			PM.GroundLayer = LayerMask.GetMask("Ground1");
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground1"), false);
 		}

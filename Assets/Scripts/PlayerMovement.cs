@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float JumpBufferTime;
     [field:SerializeField] public float CurrJumpBufferTime { get; private set; }
     public bool IsGrounded { get; private set; }
-    [SerializeField] LayerMask GroundLayer;
+    public LayerMask GroundLayer;
     [SerializeField] Transform GroundCheckPos;
     public bool JumpBuffer { get; private set; }
     [Header("Gravity")] float gravityScale = 1f;
