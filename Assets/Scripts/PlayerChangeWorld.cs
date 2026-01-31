@@ -11,10 +11,12 @@ public class PlayerChangeWorld : MonoBehaviour
 	[SerializeField] LayerMask NoMask;
 	InputAction WearMask;
 	[SerializeField] SpriteRenderer TransitionSR;
+	private Animator animator;
 	private void Awake()
 	{
 		WearMask = InputSystem.actions.FindAction("Mask");
 		PM = GetComponent<PlayerMovement>();
+		animator = this.GetComponentInChildren<Animator>();
 	}
 	private void Start()
 	{
@@ -37,6 +39,8 @@ public class PlayerChangeWorld : MonoBehaviour
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World1"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground2"), false);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World2"), false);
+			animator.SetBool("World",true);
+			animator.SetTrigger("WorldChange");
 		}
 		else if (WearMask.WasPressedThisFrame() && isWearingMask && !overlap)
 		{
@@ -48,6 +52,8 @@ public class PlayerChangeWorld : MonoBehaviour
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World2"), true);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("Ground1"), false);
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Both"), LayerMask.NameToLayer("World1"), false);
+			animator.SetBool("World",false);
+			animator.SetTrigger("WorldChange");
 		}
 		else if (WearMask.WasPressedThisFrame() && overlap)
 		{

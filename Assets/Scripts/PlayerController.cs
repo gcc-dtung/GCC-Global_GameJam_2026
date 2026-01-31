@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private PlayerOnBoard _onBoardState;
     // private PlayerWallSlideState _slideState;
     private PlayerWallJumpState _wallJumpState;
+    private bool logic = false;
     void Awake()
     {
         OnInit();
