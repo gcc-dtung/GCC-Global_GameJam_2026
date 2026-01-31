@@ -16,8 +16,6 @@ public class PlayerController : MonoBehaviour
     private PlayerTouchInteractionState _touchInteractionState;
     private PlayerOnBoard _onBoardState;
     // private PlayerWallSlideState _slideState;
-    private PlayerWallJumpState _wallJumpState;
-    private bool logic = false;
     void Awake()
     {
         OnInit();
@@ -33,7 +31,6 @@ public class PlayerController : MonoBehaviour
         _touchInteractionState = new PlayerTouchInteractionState(this, "Touch");
         _onBoardState = new PlayerOnBoard(this, "OnBoard");
 
-        _wallJumpState = new PlayerWallJumpState(this, "WallJump");
         _stateMachineManager.AddTransition(_groundState,_jumpState,() => input.JumpAction.WasPressedThisFrame());
         _stateMachineManager.AddTransition(_groundState,_pushAndHoldState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.HoldInteract);
         _stateMachineManager.AddTransition(_groundState,_touchInteractionState,() => input.InteractAction.WasPressedThisFrame() && InteractSystem.CheckInteractionItem() && InteractSystem.InteractType == TypeOfInteract.PressInteract);
