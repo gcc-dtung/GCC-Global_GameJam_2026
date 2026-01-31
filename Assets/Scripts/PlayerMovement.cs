@@ -23,6 +23,21 @@ public class PlayerMovement : MonoBehaviour
     
     [Header("Other")] public bool IsFacingRight = true;
     
+    [Header("WallJump")]
+    [SerializeField] private Transform firstWallCheckPoint;
+    [SerializeField] private Transform secondWallCheckPoint;
+    [SerializeField] float wallCheckDistance;
+    [SerializeField] private Vector2 WallJumpForce;
+    [SerializeField] private float WallJumpCoyoteTimeMax;
+    [SerializeField] private float WallJumpCounter;
+    [SerializeField] private float WallSlideMulitiphy;
+    public bool IsOnGround {get; private set;}
+    [field:SerializeField] public bool IsOnWall {get; private set;}
+    public float FacingDirection { get; private set; } = 1;
+    [Header("Wall Stick Settings")]
+    [SerializeField] private float wallStickTime = 0.25f; 
+    private float wallStickTimer;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,10 +45,62 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        IsGrounded = Physics2D.OverlapCapsule(GroundCheckPos.position, new Vector2(0.9f, 0.15f), CapsuleDirection2D.Horizontal, 0, GroundLayer);
+        IsGrounded = Physics2D.OverlapCapsule(GroundCheckPos.position, new Vector2(0.74f, 0.15f), CapsuleDirection2D.Horizontal, 0, GroundLayer);
+        WallCheck();
         Assist();
     }
 
+    #region WallJumpHandle
+    public void WallCheck()
+    {
+        IsOnWall = Physics2D.Raycast(firstWallCheckPoint.position,transform.right,wallCheckDistance,GroundLayer) 
+                   && Physics2D.Raycast(secondWallCheckPoint.position,transform.right,wallCheckDistance,GroundLayer);
+    }
+    
+    public void HandleWallSlideLogic()
+    {
+        if (Movement == 0 || (int)Mathf.Sign(Movement) == (int)FacingDirection)
+        {
+            wallStickTimer = wallStickTime;
+            WallSlide(-1); 
+        }
+        else 
+        {
+            if (wallStickTimer > 0)
+            {
+                wallStickTimer -= Time.deltaTime;
+                rb.linearVelocity = Vector2.zero; 
+            }
+            else
+            {
+                rb.linearVelocity = new Vector2(Movement * Speed, rb.linearVelocity.y);
+            }
+        }
+    }
+    
+    public void PerformWallJump()
+    {
+        float jumpDir = -FacingDirection;
+        wallStickTimer = 0;
+        Vector2 force = new Vector2(WallJumpForce.x * jumpDir, WallJumpForce.y);
+        rb.linearVelocity = force;
+        if (jumpDir > 0 && !IsFacingRight) HandleFlip();
+        else if (jumpDir < 0 && IsFacingRight) HandleFlip();
+    }
+
+    public void WallSlide(float Direction)
+    {
+        Debug.Log(Direction);
+        if (Direction >= 1f)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY);
+            return; 
+        }
+        rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY * WallSlideMulitiphy);
+    }
+
+    #endregion
+    
     #region JumpHandle
 
     public void JumpCurve()
@@ -156,7 +223,18 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(rotator);
             IsFacingRight = !IsFacingRight;
         }
+        FacingDirection *= -1;
     }
 
     #endregion
+    
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(firstWallCheckPoint.position,transform.right*wallCheckDistance);
+        Gizmos.DrawRay(secondWallCheckPoint.position,transform.right*wallCheckDistance);
+    }
+    
+    
+
+  
 }
