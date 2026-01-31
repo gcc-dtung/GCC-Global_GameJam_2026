@@ -17,21 +17,21 @@ public class Door : MonoBehaviour
 	
 	public void Open()
 	{
-		if (alo.isAlive) return;
-		alo = Tween.PositionY(transform, endValue: MaxHeight+transform.position.y, duration: duration, ease: Ease.InOutSine);
+		// if (alo.isAlive) return;
+		alo = Tween.PositionY(transform, endValue: MaxHeight, duration: duration, ease: Ease.InOutSine);
 	}
 
 	public void Close()
 	{
-		if (alo.isAlive) return;
-		alo = Tween.PositionY(transform, endValue: MinHeight+transform.position.y, duration: duration, ease: Ease.InOutSine);
+		// if (alo.isAlive) return;
+		alo = Tween.PositionY(transform, endValue: MinHeight, duration: duration, ease: Ease.InOutSine);
 	}
 
 	private void OnDisable()
 	{
-		if (alo.isAlive)
-		{
-			alo.Stop();
-		}
+		// if (alo.isAlive)
+		// {
+		// 	alo.Stop();
+		// }
 	}
 }
