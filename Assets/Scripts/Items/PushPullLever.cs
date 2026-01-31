@@ -4,7 +4,7 @@ using UnityEngine;
 public class PushPullLever : MonoBehaviour,IInteraction
 {
     public TypeOfInteract InteractType { get; set; }
-    [SerializeField] private Door _door;
+    [SerializeField] private VoidEventChannelSO pushPullLeverEvent;
     public void Awake()
     {
         InteractType = TypeOfInteract.PressInteract;
@@ -12,7 +12,7 @@ public class PushPullLever : MonoBehaviour,IInteraction
 
     public void Interacted(GameObject game)
     {
-        _door.Open();
+        pushPullLeverEvent?.RaiseEvent();
     }
 
     public void HoldInteracted(float direction)
